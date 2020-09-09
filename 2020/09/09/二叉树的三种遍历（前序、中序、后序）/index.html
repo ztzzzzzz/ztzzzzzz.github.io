@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hello World | ZT</title>
+  <title>ZT</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="二叉树的三种遍历（前序、中序、后序）前序遍历​    对于二叉树的遍历，可以分为递归和非递归的方式。这里主要分析非递归的方式。 ​    我们将数的每个节点压入栈中，由于是先序遍历，首先压入的是根节点，然后弹出（弹出节点时打印信息，且一个循环弹出一个节点），接着是压入右子树节点，最后压入左子树节点。为什么要这样呢？由于堆栈是“先进后出”结构，我们想要先打印左子树，因此最后压入左子树，循环这个过程，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2020/09/03/hello-world/index.html">
+<meta property="og:title" content="ZT">
+<meta property="og:url" content="http://example.com/2020/09/09/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%EF%BC%88%E5%89%8D%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E3%80%81%E5%90%8E%E5%BA%8F%EF%BC%89/index.html">
 <meta property="og:site_name" content="ZT">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="二叉树的三种遍历（前序、中序、后序）前序遍历​    对于二叉树的遍历，可以分为递归和非递归的方式。这里主要分析非递归的方式。 ​    我们将数的每个节点压入栈中，由于是先序遍历，首先压入的是根节点，然后弹出（弹出节点时打印信息，且一个循环弹出一个节点），接着是压入右子树节点，最后压入左子树节点。为什么要这样呢？由于堆栈是“先进后出”结构，我们想要先打印左子树，因此最后压入左子树，循环这个过程，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-03T01:21:27.336Z">
-<meta property="article:modified_time" content="2020-09-03T01:21:27.336Z">
+<meta property="article:published_time" content="2020-09-09T12:26:38.494Z">
+<meta property="article:modified_time" content="2020-09-08T11:34:08.263Z">
 <meta property="article:author" content="Zhu Tao">
 <meta name="twitter:card" content="summary">
   
@@ -154,39 +154,22 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-二叉树的三种遍历（前序、中序、后序）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-        
-        <a href="/2020/09/03/hello-world/" class="archive-article-date">
-  	<time datetime="2020-09-03T01:21:27.336Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-03</time>
-</a>
-        
-      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h1 id="二叉树的三种遍历（前序、中序、后序）"><a href="#二叉树的三种遍历（前序、中序、后序）" class="headerlink" title="二叉树的三种遍历（前序、中序、后序）"></a>二叉树的三种遍历（前序、中序、后序）</h1><h2 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h2><p>​    对于二叉树的遍历，可以分为递归和非递归的方式。这里主要分析非递归的方式。</p>
+<p>​    我们将数的每个节点压入栈中，由于是先序遍历，首先压入的是根节点，然后弹出（弹出节点时打印信息，且一个循环弹出一个节点），接着是压入右子树节点，最后压入左子树节点。为什么要这样呢？由于堆栈是“先进后出”结构，我们想要先打印左子树，因此最后压入左子树，循环这个过程，就达到了我们的目的。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="literal">NULL</span>) <span class="keyword">return</span> res;   <span class="comment">//空 的 一 定 要 写</span></span><br><span class="line">        <span class="built_in">stack</span>&lt;TreeNode*&gt; stk;</span><br><span class="line">        TreeNode* cur=root;</span><br><span class="line">        stk.push(root);</span><br><span class="line">        <span class="keyword">while</span>(!stk.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            cur=stk.top();</span><br><span class="line">            stk.pop();</span><br><span class="line">            res.push_back(cur-&gt;val);</span><br><span class="line">            <span class="keyword">if</span>(cur-&gt;right)</span><br><span class="line">            stk.push(cur-&gt;right);</span><br><span class="line">            <span class="keyword">if</span>(cur-&gt;left)</span><br><span class="line">            stk.push(cur-&gt;left);</span><br><span class="line">        </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h2><p>对于中序遍历，只有在左子节点为空时，才会进行出栈并打印输出，并随后指向其右节点。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printinorder</span><span class="params">(TreeNode* head)</span></span></span><br><span class="line">    cout &lt;&lt; &quot;In Order:&quot; &lt;&lt; endl;</span><br><span class="line">    <span class="built_in">stack</span>&lt;TreeNode*&gt; stk;</span><br><span class="line">    TreeNode* cur=head;</span><br><span class="line">    stk.push(cur);</span><br><span class="line">	<span class="keyword">while</span>(!stk.empty()||cur!=<span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">    	<span class="keyword">if</span>(cur!=<span class="literal">NULL</span>)</span><br><span class="line">    	&#123;</span><br><span class="line">            stk.push(cur);</span><br><span class="line">        	cur=cut-&gt;left;</span><br><span class="line">    	&#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            cur=stk.top();</span><br><span class="line">            stk.pop();</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;cur.value&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            cur=cur-&gt;right;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h2 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h2><p>​    后续遍历和前序遍历比较类似，对一个后续遍历的结果序列，我们可以先将其反转得到一个新的序列，程序中首先按照这个顺序入栈出栈，首先对根节点进行入栈，随后弹出，再将根节点的左右节点入栈（先序遍历是右左节点），最后将得到的数组进行反转，随之得到最终的结果。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; <span class="title">postorder</span><span class="params">(Node* root)</span> </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; res;</span><br><span class="line">        <span class="built_in">stack</span>&lt;Node*&gt; stk;</span><br><span class="line">        stk.push(root);</span><br><span class="line">        Node* cur=root;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(!stk.empty())</span><br><span class="line">        &#123;</span><br><span class="line">            cur=stk.top();</span><br><span class="line">            stk.pop();</span><br><span class="line">            res.push_back(cur-&gt;val);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;cur-&gt;children.<span class="built_in">size</span>();++i)</span><br><span class="line">            &#123;</span><br><span class="line">                stk.push(cur-&gt;children[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        reverse(res.<span class="built_in">begin</span>(),res.<span class="built_in">end</span>());</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="层序遍历"><a href="#层序遍历" class="headerlink" title="层序遍历"></a>层序遍历</h2><p>层序遍历主要使用队列来实现，与前序遍历类似，先入队的先出队，先将根节点入队，每次循环弹出一个节点，随后将弹出节点的左右节点入队。</p>
 
       
 
@@ -266,7 +249,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/03/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2020/09/09/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E4%B8%89%E7%A7%8D%E9%81%8D%E5%8E%86%EF%BC%88%E5%89%8D%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E3%80%81%E5%90%8E%E5%BA%8F%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -280,15 +263,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2-zt/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          我的第一篇博客-zt
-        
-      </div>
-    </a>
   
+    <a href="/2020/09/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2-zt/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客-zt</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
